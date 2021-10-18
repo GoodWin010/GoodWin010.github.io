@@ -1,0 +1,621 @@
+/*основа*/
+body {
+    max-width: 1270px;
+    box-sizing: content-box;
+    font-family: 'Franklin Gothic regular', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+    .cherta{
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 9px;
+        margin-left: 605px;
+        padding: 2%;
+        background: url("../images/Черта заголовка.png") no-repeat;
+    }
+
+
+    *,
+    *:before
+    *:after{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    h1{
+        font-weight: 700;
+        font-size: 38pt;
+        line-height: 1;
+        font-style: normal;
+        text-shadow: 0 0 1px #000;
+        text-align: center;
+    }
+
+    h3{
+        display: block;
+        font-size: 13pt;
+        text-align: center;
+        font-weight: 600;
+        font-style: normal;
+        margin-top: 50px;
+    }
+
+    h5{
+        font-size:11pt;
+        font-weight: 100;
+        text-align: center;
+        color: rgba(109,118,130, 0.7);
+    }
+
+    h6{
+        font-size: 10pt;
+        font-weight: 100;
+        
+        color: rgb(0, 0, 0, 0.6);
+    }
+
+/*верхушка*/
+.header{
+    width: 100%;
+    max-width: 1270px;
+    position: relative;
+    display:inline-block;
+}
+
+    .nav{
+        width: 100%;    
+        height: 6vh;  
+        background: url("../images/верх/плашка.png") no-repeat;
+        background-size: auto auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        font-size: 20px;
+        font-weight: 700;
+        color: #eee;
+        margin-left: 200px;
+    }
+
+/*меню навигации*/
+.menu{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 200px;
+    
+}
+
+    .nav__link{
+        font-size: 10px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 20px;
+        position:relative;
+        color:#eee;
+        text-decoration: none;
+        transition: color 0.1s linear;
+    }
+
+    .nav__link::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #fce38a;
+        opacity: 0;
+        position: absolute;
+        top:100%;
+        left:0;
+        z-index: 1;
+        transition:opacity 0.1s linear;
+    }
+
+    .nav__link:hover{
+        color:#fce38a;
+    }
+
+    .nav__link:hover:after{
+        opacity: 1;
+    }
+
+/*Я и картинка*/
+
+.main{ 
+    max-width: 1270px;
+    width:1270px;
+    height:100vh;
+    background: url("../images/приветствие/me.png") right/auto 750px no-repeat, url("../images/приветствие/фон.png") 0 0/1270px 900px no-repeat local;
+}
+ 
+    .title_container{
+        display: inline-block;
+        width: 50%;
+        height: 100vh;
+        margin-top:300px;
+        margin-left: 0;
+        padding-left: 220px;
+        line-height: 5;  
+        text-align: center;
+    }
+
+
+    a.button1{
+        font-weight: 300;
+        color: rgba(109,118,130, 0.7);
+        text-decoration: none;
+        padding: .6em 1em calc(.6em + 3px);
+        border-radius: 3px;
+        background: rgb(233,234,241);
+        border: 2px solid;
+        border-color: rgba(109,118,130, 0.4);
+    }
+
+    a.button2{
+        font-weight: 300;
+        color: rgba(109,118,130, 0.7);
+        text-decoration: none;
+        padding: .6em 1em calc(.6em + 3px);
+        border-radius: 3px;
+        background: rgb(233,234,241);
+        border: 2px solid;
+        border-color: rgba(109,118,130, 0.4);
+        margin-left: 30px;
+    }
+
+/*Обо мне*/
+.about_me{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    max-width: 1270px;
+   
+}
+
+.me{
+    width: 30%;
+    height: 30%;
+    margin-left: 540px;
+    margin-top: 30px;
+    overflow: hidden;
+    background: url("../images/обо мне/me2.png")0 0/auto auto no-repeat;
+     
+}
+
+
+
+.text_resume1{
+    text-align: left;
+    margin-left:450px;
+    margin-top: 10px;
+}
+
+.text_resume2{
+    margin-top: 20px;
+    text-align: left;
+    margin-left:450px;
+    margin-right: 400px;
+    overflow:auto;
+    margin-bottom: 20px;
+}
+
+.text_resume3{
+    text-align: center;
+}
+
+.resume{
+    max-width: 200px;
+    width:180px;
+    margin-left: 542px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 300;
+    color: rgba(109,118,130, 0.7);
+    text-decoration: none;
+    padding: .6em 1em calc(.6em + 3px);
+    border-radius: 5px;
+    background: rgb(233,234,241) url("../images/обо мне/download.png") 10% 50%/15px 15px no-repeat;
+    border: 2px solid;
+    border-color: rgba(109,118,130, 0.4);
+    cursor: pointer;
+}
+
+
+
+
+/*что я умею*/
+.what_i_can{
+    display: inline-block;
+    width: 100%;
+    height: 50vh;
+    max-width: 1270px;
+    background: url("../images/что я умею/ноут.png") 20% 50% no-repeat, url("../images/что я умею/знак.png") 40% 50% no-repeat, url("../images/что я умею/ракета.png") 60% 50% no-repeat, url("../images/что я умею/граммофон.png") 80% 50% no-repeat, url("../images/что я умею/картинка фона.png") 0 0/1270px 50vh no-repeat local;    
+}
+
+.pic_and_text{
+    display: inline-block;    
+}
+
+.web_design{
+    display:inline-block;
+    text-align: center;
+    padding: 20px;
+    margin-left: 178px;
+    margin-top: 100px;
+}
+
+.web_design1{
+    text-align:center;
+    font-style: normal;
+    color:#C60;
+}
+
+.development{
+    display:inline-block;
+    text-align: center;
+    padding: 20px;
+    margin-left:55px;
+    margin-top: 100px;
+}
+
+.development1{
+    text-align:center;
+    font-style: normal;
+    color:#C60;
+}
+
+.seo_optimisation{
+    display:inline-block;
+    text-align: center;
+    padding: 20px;
+    margin-left:52px;
+    margin-top: 100px;
+}
+
+.seo_optimisation1{
+    text-align:center;
+    font-style: normal;
+    color:#C60;
+}
+
+.marketing{ 
+    display:inline-block;
+    text-align: center;
+    padding: 20px;
+    margin-left:55px;
+    margin-top: 100px;
+}
+
+.marketing1{
+    text-align:center;
+    font-style: normal;
+    color:#C60;
+}
+
+/*кейсы*/
+.cases{
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    max-width: 1270px;
+}
+
+.cases_text{
+    text-align:center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cherta_cases{
+    display: inline-block;
+    margin-top: 15px;
+    
+    margin-left: 605px;
+    padding: 2%;
+    background: url("../images/Черта заголовка.png") center no-repeat;
+}
+
+.img{
+    width:100%;
+    height:60vh;
+    background: url("../images/кейсы/фотка.png") left/auto 550px no-repeat;
+}
+
+.cont{
+    display: block;
+    position: relative;
+    width: 60%;
+    height: 40vh;
+    margin-left: 20%;
+    margin-right: 20%;
+    line-height:1.5;
+}
+
+.cont1{
+    display: block;
+    width:20%;
+    height:40vh;
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+
+.cont2{
+    display: block;
+    width:80%;
+    height:40vh;
+    position:absolute;
+    right: -100px;
+    top: 0;
+}
+.client{
+    display: block;
+    padding-right: 20px;
+}
+
+.website{
+    display: block;
+    padding-right:20px;
+}
+
+.site{
+    display: inline-block;
+    max-width: 200px;
+    width:150px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 300;
+    color: #eee;
+    padding: .6em 1em calc(.6em + 3px);
+    border-radius: 5px;
+    background: #63b5ae;
+}
+
+.project{
+
+}
+
+
+
+/*расчёт стоимости*/
+.cost_calculation{
+    width: 100%;
+    height: 70vh;
+    max-width: 1270px;
+}
+
+    .characteristic{
+        width: 100%;
+        text-align: center;
+    }
+
+    .type_site{
+
+    }
+
+    .design{
+
+    }
+
+    .adaptability{
+
+    }
+
+    .term_and_cost{
+
+    }
+
+/*немного статистики*/
+.statistic{
+    display: inline-block;
+    width: 100%;
+    height: 60vh;
+    max-width: 1270px;
+    background: url("../images/немного статистики/смайл.png") 25% 45% no-repeat, url("../images/немного статистики/скобки.png") 42% 45% no-repeat, url("../images/немного статистики/галочка.png") 58% 45% no-repeat, url("../images/немного статистики/кубок.png") 76% 45% no-repeat, url("../images/немного статистики/фон.png") 0 0/1270px 50vh no-repeat local;
+}
+
+
+    .container_statistics{
+        display: inline-block;
+        position: relative;
+    }
+
+    .happy_clients{
+        display:inline-block;
+        text-align: center;
+        padding: 20px;
+        margin-left: 178px;
+        margin-top: 100px;
+    }
+
+    .happy_clients1{
+        position:absolute;
+        display: block;
+        text-align:center;
+        font-style: normal;
+        color:#000;
+        right:800px;
+        top: 220px;
+    }
+
+    .hours_of_work{
+    display:inline-block;
+    text-align: center;
+    padding: 20px;
+    margin-left:55px;
+    margin-top: 100px;
+    }
+
+    .hours_of_work1{
+        position:absolute;
+        display: block;
+        text-align:center;
+        font-style: normal;
+        color:#000;
+        right:607px;
+        top: 220px;
+    }
+
+    .projects_completed{
+        display:inline-block;
+        text-align: center;
+        padding: 20px;
+        margin-left:52px;
+        margin-top: 100px;
+    }
+
+    .projects_completed1{
+        position:absolute;
+        display: block;
+        text-align:center;
+        font-style: normal;
+        color:#000;
+        right:380px;
+        top: 220px;
+    }
+
+    .awards_received{
+        display:inline-block;
+    text-align: center;
+    padding: 20px;
+    margin-left:55px;
+    margin-top: 100px; 
+    }
+
+    .awards_received1{
+        position:absolute;
+        display: block;
+        text-align:center;
+        font-style: normal;
+        color:#000;
+        right:165px;
+        top: 220px;
+    }
+
+/*отзывы*/
+.reviews{
+    width:100%;
+    height:30vh;
+    max-width: 1270px;
+    text-align: center;
+}
+
+.cherta_review{
+    display: inline-block;
+    margin-top: 15px;
+    
+    margin-left: 605px;
+    padding: 2%;
+    background: url("../images/Черта заголовка.png") center no-repeat;
+}
+
+    .review_pics{
+
+    }
+
+    .text_review{
+
+    }
+
+    .choise{
+        
+    }
+
+/*контакты*/
+.contacts{
+    display: inline-block;
+    width:100%;
+    height: 70vh;
+    max-width: 1270px;
+    color: #eee;
+    background: url("../images/мои контакты/Фон.png")0 0/1270px 70vh no-repeat local;
+}
+
+    .text_contacts{
+
+    }
+
+    .geo_mail_tel{
+
+    }
+
+    .geo{
+
+    }
+
+    .mail{
+
+    }
+
+    .tel{
+
+    }
+
+    .messages{
+
+    }
+
+    .send{
+
+    }
+
+    .ss{
+        display: inline-block;
+        width: 100%;
+        height:10%;
+    }
+
+    .FaceBook{
+        width:100%;
+        height:auto;
+        background: url("../images/мои контакты/фб.png") no-repeat;
+        position:absolute;
+        top: 0;
+    }
+
+    .Twitter{
+        background: url("../images/мои контакты/твитер.png") no-repeat;
+    }
+
+    .Dribbble{
+        background: url("../images/мои контакты/мяч.png") no-repeat;
+    }
+
+    .GitHub{
+        background: url("../images/мои контакты/киса.png") no-repeat;
+    }
+
+    .Instagram{
+        background: url("../images/мои контакты/инст.png") no-repeat;
+    }
+
+    .Linkedin{
+        background: url("../images/мои контакты/ин.png") 0 0 no-repeat;
+    }
+
+/*карты*/
+.maps {
+    max-height: 200px;
+    height: 30vh;
+    max-width:1270px;
+    margin-block: 0px;
+    margin-top:0px;
+}
+
+/*низ*/
+.footer{
+    max-width:1270px;
+    width: 100%;
+    height: 20vh;
+    background: url("../images/низ.png")no-repeat;
+    display:inline-block;
+}
+
+.text1{
+    color: #eee;
+    text-align: center;
+    margin-top: 80px;
+}
